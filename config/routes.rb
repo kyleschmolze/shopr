@@ -1,6 +1,8 @@
 Shoppr::Application.routes.draw do
-  resources :stores
 
+  match '*all' => 'application#cors_preflight_check', :constraints => {:method => 'OPTIONS'} 
+
+  resources :stores
   resources :items
   root :to => 'items#index'
 
