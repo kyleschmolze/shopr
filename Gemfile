@@ -43,6 +43,11 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :test do
+	gem "heroku"
+	gem "rspec-rails", "~> 2.6"
+  gem "factory_girl_rails"
+	gem 'fakeweb'
+	gem 'delorean'
   # Pretty printed test output
   gem 'turn', :require => false
 end
